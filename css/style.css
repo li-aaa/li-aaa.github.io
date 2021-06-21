@@ -692,6 +692,23 @@ body {
     font:300 17px;
     text-shadow:0 0 1px rgba(0,0,0,.1)
 }
+
+body:after {
+    background:url(https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(8).jpg.webp);
+    content : '';                 /* 伪类需要有内容，否则会变成0*0，无法显示效果 */
+    width: 100%;                  /* 宽度拉满 */
+    height: 100%;                 /* 高度拉满 */
+    background-size: cover;       /* 背景图片铺满整个容器 */
+    background-repeat: no-repeat; /* 不要重复 */
+    opacity: 0.5;                 /* 透明度为50% */
+    -moz-opacity: 0.5;            /* 火狐浏览器的透明度设置 */
+    -khtml-opacity: 0.5;          /* safari浏览器的透明度设置，它使用了KDE的KHTML作为内核 */
+    position: fixed;              /* 位置设为固定，否则往下滑背景图片就滑没了 */
+    z-index: -1;                  /* 防遮罩 */
+    top: 0;                       /* y坐标抵到浏览器顶部 */
+    left: 0;                      /* x坐标抵到浏览器左侧 */
+}
+
 input:-webkit-autofill {
     -webkit-box-shadow:0 0 0 1000px white inset
 }
