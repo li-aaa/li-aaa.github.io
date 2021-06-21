@@ -694,7 +694,7 @@ body {
 }
 
 body:after {
-    background:url(https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(8).jpg.webp);
+    background:url(https://source.unsplash.com/random/1600x900);
     content : '';                 /* 伪类需要有内容，否则会变成0*0，无法显示效果 */
     width: 100%;                  /* 宽度拉满 */
     height: 100%;                 /* 高度拉满 */
