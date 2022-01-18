@@ -219,12 +219,8 @@
         </center>
     </div>
     <div class="content-article">
-        <h1 id="记录踩的坑"><a href="#记录踩的坑" class="headerlink" title="记录踩的坑"></a>记录踩的坑</h1><body>
-​    今天突发兴致再来搞搞静态博客，之前随便搞了个模板就传github了。那会跟着教程做，基本没有碰到什么问题。打开hexo的官网就看到了模仿忧郁的弟弟网站做的hexo主题移植，功能没有完全复原，但差的八九不离十，于是就打算搞这个主题，之后就踩了很多的坑。
-</body>
-## 1.Node版本
-
-<p>​    之前在完成大课设的时候下载的node为比较新的16.x，当时就发现了一定的问题，即无法更新模块。在控制台中虽然显示下载，但在对应的node_modules中并没有相应的文件夹，这是通过安装其他模块时的报错发现的。比如tar的版本一直是2.2，使用<code>npm i</code>时就会提示（warn）版本过低。在使用<code>cnpm i</code>时却没有警告。</p>
+        <h1 id="记录踩的坑"><a href="#记录踩的坑" class="headerlink" title="记录踩的坑"></a>记录踩的坑</h1><p>​    今天突发兴致再来搞搞静态博客，之前随便搞了个模板就传github了。那会跟着教程做，基本没有碰到什么问题。打开hexo的官网就看到了模仿忧郁的弟弟网站做的hexo主题移植，功能没有完全复原，但差的八九不离十，于是就打算搞这个主题，之后就踩了很多的坑。</p>
+<h2 id="1-Node版本"><a href="#1-Node版本" class="headerlink" title="1.Node版本"></a>1.Node版本</h2><p>​    之前在完成大课设的时候下载的node为比较新的16.x，当时就发现了一定的问题，即无法更新模块。在控制台中虽然显示下载，但在对应的node_modules中并没有相应的文件夹，这是通过安装其他模块时的报错发现的。比如tar的版本一直是2.2，使用<code>npm i</code>时就会提示（warn）版本过低。在使用<code>cnpm i</code>时却没有警告。</p>
 <p>​    在这次的配置过程中也遇到了这样的问题，但是有些模块版本需要更新，但是一直更新不了，这就导致一直报错。</p>
 <p>​    然后我发现了package.josn和package-lock.josn的区别，简单的说就是package-lock会将依赖的版本确定下来，这样就不会发生版本不对的问题。我一想是不是这个的问题，于是删除了package-lock进行了尝试，结果却是没什么用处。</p>
 <p>​    查遍网络，大多数的回答都是网络问题，通过使用国内的镜像解决。但我无论是开不开梯子，用npm还是cnpm都遇到了问题。</p>
@@ -236,7 +232,140 @@
 
 
 
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #737373;
+    background-color: white;
+    margin: 10px 13px 10px 13px;
+}
+table {
+    margin: 10px 0 15px 0;
+    border-collapse: collapse;
+}
+td,th { 
+    border: 1px solid #ddd;
+    padding: 3px 10px;
+}
+th {
+    padding: 5px 10px;  
+}
+a {
+    color: #0069d6;
+}
+a:hover {
+    color: #0050a3;
+    text-decoration: none;
+}
+a img {
+    border: none;
+}
+p {
+    margin-bottom: 9px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #404040;
+    line-height: 36px;
+}
+h1 {
+    margin-bottom: 18px;
+    font-size: 30px;
+}
+h2 {
+    font-size: 24px;
+}
+h3 {
+    font-size: 18px;
+}
+h4 {
+    font-size: 16px;
+}
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 13px;
+}
+hr {
+    margin: 0 0 19px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+}
+blockquote {
+    padding: 13px 13px 21px 15px;
+    margin-bottom: 18px;
+    font-family:georgia,serif;
+    font-style: italic;
+}
+blockquote:before {
+    content:"\201C";
+    font-size:40px;
+    margin-left:-10px;
+    font-family:georgia,serif;
+    color:#eee;
+}
+blockquote p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    margin-bottom: 0;
+    font-style: italic;
+}
+code, pre {
+    font-family: Monaco, Andale Mono, Courier New, monospace;
+}
+code {
+    background-color: #fee9cc;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 1px 3px;
+    font-size: 12px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    line-height: 16px;
+    font-size: 11px;
+    border: 1px solid #d9d9d9;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+pre code {
+    background-color: #fff;
+    color:#737373;
+    font-size: 11px;
+    padding: 0;
+}
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
 
+<p>{<br>-webkit-print-color-adjust: exact;<br>}<br>@media screen and (min-width: 914px) {<br>body {<br>    width: 854px;<br>    margin:10px auto;<br>}<br>}<br>@media print {<br>body,code,pre code,h1,h2,h3,h4,h5,h6 {<br>    color: black;<br>}<br>table, pre {<br>    page-break-inside: avoid;<br>}<br>}<br></style></p>
 <p>​    </p>
 
     </div>
@@ -390,9 +519,9 @@
                 
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/web/" style="font-size: 12.412013383835518px;" class="tag-cloud-link">web</a>
+    <a href="/tags/web/" style="font-size: 18.087509807637336px;" class="tag-cloud-link">web</a>
     
-    <a href="/tags/%E6%82%A6%E8%AF%BB/" style="font-size: 19.038923829147915px;" class="tag-cloud-link">悦读</a>
+    <a href="/tags/%E6%82%A6%E8%AF%BB/" style="font-size: 17.712457393974546px;" class="tag-cloud-link">悦读</a>
     
 </div>
                 
