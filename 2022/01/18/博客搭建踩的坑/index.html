@@ -363,10 +363,26 @@ sup {
     font-size: 0.83em;
     vertical-align: super;
     line-height: 0;
+}{
+-webkit-print-color-adjust: exact;
 }
+@media screen and (min-width: 914px) {
+body {
+    width: 854px;
+    margin:10px auto;
+}
+}
+@media print {
+body,code,pre code,h1,h2,h3,h4,h5,h6 {
+    color: black;
+}
+table, pre {
+    page-break-inside: avoid;
+}
+}
+</style>
+​    
 
-<p>{<br>-webkit-print-color-adjust: exact;<br>}<br>@media screen and (min-width: 914px) {<br>body {<br>    width: 854px;<br>    margin:10px auto;<br>}<br>}<br>@media print {<br>body,code,pre code,h1,h2,h3,h4,h5,h6 {<br>    color: black;<br>}<br>table, pre {<br>    page-break-inside: avoid;<br>}<br>}<br></style></p>
-<p>​    </p>
 
     </div>
 </article>
@@ -519,9 +535,9 @@ sup {
                 
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/web/" style="font-size: 15.0866686480117px;" class="tag-cloud-link">web</a>
+    <a href="/tags/web/" style="font-size: 8.719902978294606px;" class="tag-cloud-link">web</a>
     
-    <a href="/tags/%E6%82%A6%E8%AF%BB/" style="font-size: 17.886653120709063px;" class="tag-cloud-link">悦读</a>
+    <a href="/tags/%E6%82%A6%E8%AF%BB/" style="font-size: 8.705305456588793px;" class="tag-cloud-link">悦读</a>
     
 </div>
                 
