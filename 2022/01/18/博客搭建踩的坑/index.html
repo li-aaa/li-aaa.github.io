@@ -10,7 +10,7 @@
     
     
     
-    <title>video | Blog</title>
+    <title>博客搭建踩的坑 | Blog</title>
     <link href="https://li-aaa.github.io" rel="prefetch" />
 
     
@@ -178,21 +178,27 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 gal-right" id="mainstay">
-                    <!-- 搜索页面(尽可能接近ZanBlog搜索功能) -->
-
-
+                    
 <article class="article well article-body" id="article">
+    <div class="breadcrumb">
+        <i class="fa fa-home"></i>
+        <a href="https://li-aaa.github.io">Blog</a>
+        >
+        <span>博客搭建踩的坑</span>
+    </div>
     <!-- 大型设备详细文章 -->
     <div class="hidden-xs">
         <div class="title-article">
             <h1>
-                <a href="/video/index.html">video</a>
+                <a href="/2022/01/18/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%B8%A9%E7%9A%84%E5%9D%91/">博客搭建踩的坑</a>
             </h1>
         </div>
         <div class="tag-article">
+            
             <span class="label label-gal">
-                <i class="fa fa-calendar"></i> 2018-12-20
+                <i class="fa fa-calendar"></i> 2022-01-18
             </span>
+            
         </div>
     </div>
     <!-- 小型设备详细文章 -->
@@ -200,102 +206,37 @@
         <center>
             <div class="title-article">
                 <h4>
-                    <a href="/video/index.html">video</a>
+                    <a href="/2022/01/18/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%B8%A9%E7%9A%84%E5%9D%91/">博客搭建踩的坑</a>
                 </h4>
             </div>
             <p>
-                <i class="fa fa-calendar"></i> 2018-12-20
+                <i class="fa fa-calendar"></i> 2022-01-18
+            </p>
+            <p>
+                
+                
             </p>
         </center>
     </div>
     <div class="content-article">
-        
-<script>
-  var videos = [
-    {
-      img: 'https://lain.bgm.tv/pic/cover/l/0e/1e/218971_2y351.jpg',
-      title: '朝花夕誓——于离别之朝束起约定之花',
-      status: '已追完',
-      progress: 100,
-      jp: 'さよならの朝に約束の花をかざろう',
-      time: '放送时间: 2018-02-24 SUN.',
-      desc: ' 住在远离尘嚣的土地，一边将每天的事情编织成名为希比欧的布，一边静静生活的伊欧夫人民。在15岁左右外表就停止成长，拥有数百年寿命的他们，被称为“离别的一族”，并被视为活着的传说。没有双亲的伊欧夫少女玛奇亚，过着被伙伴包围的平稳日子，却总感觉“孤身一人”。他们的这种日常，一瞬间就崩溃消失。追求伊欧夫的长寿之血，梅萨蒂军乘坐着名为雷纳特的古代兽发动了进攻。在绝望与混乱之中，伊欧夫的第一美女蕾莉亚被梅萨蒂带走，而玛奇亚暗恋的少年克里姆也失踪了。玛奇亚虽然总算逃脱了，却失去了伙伴和归去之地……。'
-    },
-    {
-      img : 'https://lain.bgm.tv/pic/cover/l/0e/1e/218971_2y351.jpg',
-      title: '朝花夕誓——于离别之朝束起约定之花',
-      status: '已追完',
-      progress: 100,
-      jp: 'さよならの朝に約束の花をかざろう',
-      time: '2018-02-24 SUN.',
-      desc: ' 住在远离尘嚣的土地，一边将每天的事情编织成名为希比欧的布，一边静静生活的伊欧夫人民。在15岁左右外表就停止成长，拥有数百年寿命的他们，被称为“离别的一族”，并被视为活着的传说。没有双亲的伊欧夫少女玛奇亚，过着被伙伴包围的平稳日子，却总感觉“孤身一人”。他们的这种日常，一瞬间就崩溃消失。追求伊欧夫的长寿之血，梅萨蒂军乘坐着名为雷纳特的古代兽发动了进攻。在绝望与混乱之中，伊欧夫的第一美女蕾莉亚被梅萨蒂带走，而玛奇亚暗恋的少年克里姆也失踪了。玛奇亚虽然总算逃脱了，却失去了伙伴和归去之地……。'
-    }
-  ]
-</script>
+        <h1 id="记录踩的坑"><a href="#记录踩的坑" class="headerlink" title="记录踩的坑"></a>记录踩的坑</h1><p>​    今天突发兴致再来搞搞静态博客，之前随便搞了个模板就传github了。那会跟着教程做，基本没有碰到什么问题。打开hexo的官网就看到了模仿忧郁的弟弟网站做的hexo主题移植，功能没有完全复原，但差的八九不离十，于是就打算搞这个主题，之后就踩了很多的坑。</p>
+<h2 id="1-Node版本"><a href="#1-Node版本" class="headerlink" title="1.Node版本"></a>1.Node版本</h2><p>​    之前在完成大课设的时候下载的node为比较新的16.x，当时就发现了一定的问题，即无法更新模块。在控制台中虽然显示下载，但在对应的node_modules中并没有相应的文件夹，这是通过安装其他模块时的报错发现的。比如tar的版本一直是2.2，使用<code>npm i</code>时就会提示（warn）版本过低。在使用<code>cnpm i</code>时却没有警告。</p>
+<p>​    在这次的配置过程中也遇到了这样的问题，但是有些模块版本需要更新，但是一直更新不了，这就导致一直报错。</p>
+<p>​    然后我发现了package.josn和package-lock.josn的区别，简单的说就是package-lock会将依赖的版本确定下来，这样就不会发生版本不对的问题。我一想是不是这个的问题，于是删除了package-lock进行了尝试，结果却是没什么用处。</p>
+<p>​    查遍网络，大多数的回答都是网络问题，通过使用国内的镜像解决。但我无论是开不开梯子，用npm还是cnpm都遇到了问题。</p>
+<p>​    之后我选择了更换Node版本，在下载了node14.x后，虽然问题还没有解决，但我惊喜的发现，模块可以更新了。在node_modules中出现了不同版本的同一模块。于是现在的问题就变成了版本适配问题。</p>
+<h2 id="2-node-sass版本"><a href="#2-node-sass版本" class="headerlink" title="2.node-sass版本"></a>2.node-sass版本</h2><p>​    由于该项目需要使用hexo-renderer-sass，所以需要下载node-sass。但是遇到了版本不适配的问题，系统提示找不到对应版本的node-sass（win64+node14）。但在node-sass的网站中，我找到了版本对应的表格，我发现node-sass7.0.1是支持node14的，那么问题出在了哪。在后面的错误报告中我找到了一样东西uuid，这东西也报了错，在网上搜索后，在stackoverflow中找到了一条帖子说uuid在8以后的版本删除了一种表达方式，导致了和老版本无法兼容的问题。在我的尝试下，node14+uuid7.0.0+node-sass6.0.1+hexo-renderer-sass0.4.0成功跑通了。后面就是将博客发布到github上了。</p>
+<h2 id="3-python版本"><a href="#3-python版本" class="headerlink" title="3.python版本"></a>3.python版本</h2><p>​    我在网上搜索中发现，该项目的某一模块需要使用python2.7。由于我本来就是python2.7，所以并未碰到有关问题，但还是记录一下。</p>
+<h2 id="4-贴一下package-json的源码"><a href="#4-贴一下package-json的源码" class="headerlink" title="4.贴一下package.json的源码"></a>4.贴一下package.json的源码</h2><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;hexo-site&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;version&quot;</span>: <span class="string">&quot;0.0.0&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;private&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;build&quot;</span>: <span class="string">&quot;hexo generate&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;clean&quot;</span>: <span class="string">&quot;hexo clean&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;deploy&quot;</span>: <span class="string">&quot;hexo deploy&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;server&quot;</span>: <span class="string">&quot;hexo server&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">&quot;hexo&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;version&quot;</span>: <span class="string">&quot;5.4.0&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">&quot;dependencies&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;hexo&quot;</span>: <span class="string">&quot;^5.0.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;hexo-deployer-git&quot;</span>: <span class="string">&quot;^3.0.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;hexo-generator-archive&quot;</span>: <span class="string">&quot;^1.0.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;hexo-generator-category&quot;</span>: <span class="string">&quot;^1.0.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;hexo-generator-index&quot;</span>: <span class="string">&quot;^2.0.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;hexo-generator-json-content&quot;</span>: <span class="string">&quot;^4.2.3&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;hexo-generator-tag&quot;</span>: <span class="string">&quot;^1.0.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;hexo-renderer-ejs&quot;</span>: <span class="string">&quot;^1.0.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;hexo-renderer-marked&quot;</span>: <span class="string">&quot;^4.0.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;hexo-renderer-sass&quot;</span>: <span class="string">&quot;^0.4.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;hexo-renderer-scss&quot;</span>: <span class="string">&quot;^1.2.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;hexo-renderer-stylus&quot;</span>: <span class="string">&quot;^2.0.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;hexo-server&quot;</span>: <span class="string">&quot;^2.0.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;hexo-theme-fluid&quot;</span>: <span class="string">&quot;^1.8.11&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;hexo-theme-landscape&quot;</span>: <span class="string">&quot;^0.0.3&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;node-sass&quot;</span>:<span class="string">&quot;6.0.1&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;uuid&quot;</span>: <span class="string">&quot;^7.0.0&quot;</span></span><br><span class="line">   </span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 
 
-  <style>.should-ellipsis{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:95%;}.should-ellipsis-full{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:100%;}.should-ellipsis i{position:absolute;right:24px;}.grey-text{color:#9e9e9e !important}.grey-text.text-darken-4{color:#212121 !important}html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}img{border-style:none}progress{display:inline-block;vertical-align:baseline}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{-webkit-box-sizing:border-box;box-sizing:border-box}*,*:before,*:after{-webkit-box-sizing:inherit;box-sizing:inherit}ul:not(.browser-default){padding-left:0;list-style-type:none}ul:not(.browser-default)>li{list-style-type:none}.card{-webkit-box-shadow:0 2px 2px 0 rgba(0,0,0,0.14),0 3px 1px -2px rgba(0,0,0,0.12),0 1px 5px 0 rgba(0,0,0,0.2);box-shadow:0 2px 2px 0 rgba(0,0,0,0.14),0 3px 1px -2px rgba(0,0,0,0.12),0 1px 5px 0 rgba(0,0,0,0.2)}.hoverable{-webkit-transition:-webkit-box-shadow .25s;transition:-webkit-box-shadow .25s;transition:box-shadow .25s;transition:box-shadow .25s,-webkit-box-shadow .25s}.hoverable:hover{-webkit-box-shadow:0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);box-shadow:0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)}i{line-height:inherit}i.right{float:right;margin-left:15px}.bangumi .right{float:right !important}.material-icons{text-rendering:optimizeLegibility;-webkit-font-feature-settings:'liga';-moz-font-feature-settings:'liga';font-feature-settings:'liga'}.row{margin-left:auto;margin-right:auto;margin-bottom:20px}.row:after{content:"";display:table;clear:both}.row .col{float:left;-webkit-box-sizing:border-box;box-sizing:border-box;padding:0 .75rem;min-height:1px}.row .col.s12{width:100%;margin-left:auto;left:auto;right:auto}@media only screen and (min-width:601px){.row .col.m6{width:50%;margin-left:auto;left:auto;right:auto}}html{line-height:1.5;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;font-weight:normal;color:rgba(0,0,0,0.87)}@media only screen and (min-width:0){html{font-size:14px}}@media only screen and (min-width:992px){html{font-size:14.5px}}@media only screen and (min-width:1200px){html{font-size:15px}}.card{position:relative;margin:.5rem 0 1rem 0;background-color:#fff;-webkit-transition:-webkit-box-shadow .25s;transition:-webkit-box-shadow .25s;transition:box-shadow .25s;transition:box-shadow .25s,-webkit-box-shadow .25s;border-radius:2px}.card .card-title{font-size:24px;font-weight:300}.card .card-title.activator{cursor:pointer}.card .card-image{position:relative}.card .card-image img{display:block;border-radius:2px 2px 0 0;position:relative;left:0;right:0;top:0;bottom:0;width:100%}.card .card-content{padding:24px;border-radius:0 0 2px 2px}.card .card-content p{margin:0}.card .card-content .card-title{display:block;line-height:32px;margin-bottom:8px}.card .card-content .card-title i{line-height:32px}.card .card-reveal{padding:24px;position:absolute;background-color:#fff;width:100%;overflow-y:auto;left:0;top:100%;height:100%;z-index:3;display:none}.card .card-reveal .card-title{cursor:pointer;display:block}.waves-effect{position:relative;cursor:pointer;display:inline-block;overflow:hidden;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent;vertical-align:middle;z-index:1;-webkit-transition:.3s ease-out;transition:.3s ease-out}.waves-effect img{position:relative;z-index:-1}.waves-block{display:block}::-webkit-input-placeholder{color:#d1d1d1}::-moz-placeholder{color:#d1d1d1}:-ms-input-placeholder{color:#d1d1d1}::-ms-input-placeholder{color:#d1d1d1}[type="radio"]:not(:checked){position:absolute;opacity:0;pointer-events:none}[type="radio"]:not(:checked)+span{position:relative;padding-left:35px;cursor:pointer;display:inline-block;height:25px;line-height:25px;font-size:1rem;-webkit-transition:.28s ease;transition:.28s ease;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}[type="radio"]:not(:checked)+span:before,[type="radio"]:not(:checked)+span:after{border-radius:50%}[type="radio"]:not(:checked)+span:before,[type="radio"]:not(:checked)+span:after{border:2px solid #5a5a5a}[type="radio"]:not(:checked)+span:after{-webkit-transform:scale(0);transform:scale(0)}[type="checkbox"]:not(:checked){position:absolute;opacity:0;pointer-events:none}[type="checkbox"]:not(:checked):disabled+span:not(.lever):before{border:none;background-color:rgba(0,0,0,0.42)}[type="checkbox"].filled-in:not(:checked)+span:not(.lever):before{width:0;height:0;border:3px solid transparent;left:6px;top:10px;-webkit-transform:rotateZ(37deg);transform:rotateZ(37deg);-webkit-transform-origin:100% 100%;transform-origin:100% 100%}[type="checkbox"].filled-in:not(:checked)+span:not(.lever):after{height:20px;width:20px;background-color:transparent;border:2px solid #5a5a5a;top:0px;z-index:0}input[type=checkbox]:not(:disabled) ~ .lever:active:before,input[type=checkbox]:not(:disabled).tabbed:focus ~ .lever::before{-webkit-transform:scale(2.4);transform:scale(2.4);background-color:rgba(0,0,0,0.08)}input[type=range].focused:focus:not(.active)::-webkit-slider-thumb{-webkit-box-shadow:0 0 0 10px rgba(38,166,154,0.26);box-shadow:0 0 0 10px rgba(38,166,154,0.26)}input[type=range].focused:focus:not(.active)::-moz-range-thumb{box-shadow:0 0 0 10px rgba(38,166,154,0.26)}input[type=range].focused:focus:not(.active)::-ms-thumb{box-shadow:0 0 0 10px rgba(38,166,154,0.26)}
-  </style>
-  <header class="page-header"><h1 class="cat-title">番组计划</h1> <span class="cat-des"><p>这里将是永远的回忆</p> </span></header>
-  <div class="bangumi">
-    <div class="row" id="rootRow">
-    </div>
-  </div>
-  <script>
-  window.onload = function(){
-    videos.forEach(function(video, i){
-      $('#rootRow').append(`<div class="col s12 m6" id="bangumi-218971">
-        <div class="card hoverable" style="overflow: visible;">
-          <div class="card-image waves-effect waves-block waves-light">
-            <div class="activator itempic lazyload" style="background-image: url(${video.img});" data-src="${video.img}">
-            </div>
-          </div>
-          <div class="card-content">
-            <div class="card-title should-ellipsis activator grey-text text-darken-4">
-              ${video.title}<i class="fa fa-commenting-o right"></i>
-            </div>
-            <p class="should-ellipsis-full">
-            ${video.jp}</p>
-            <ul class="skill-list">
-              <li class="skill">
-                <div>
-                ${video.status}</div>
-                <progress class="skill-1" max="100" value="${video.progress}">
-                </progress>
-              </li>
-            </ul>
-          </div>
-          <div class="card-reveal" style="display: none; transform: translateY(0%);">
-            <span class="card-title grey-text text-darken-4">
-              ${video.title}<i class="fa fa-close right"></i>
-            </span>
-            <span>
-              ${video.jp}<br>
-            </span>
-            <span>
-              放送时间: ${video.time}<span>
-                <p>${video.desc}</p>
-                <ul class="skill-list">
-                  <li class="skill">
-                    <div>
-                    ${video.status}</div>
-                    <progress class="skill-1" max="100" value="${video.progress}">
-                    </progress>
-                  </li>
-                </ul>
-              </span>
-            </span>
-          </div>
-        </div>
-      </div>`)
-    })
-  }
-  </script>
+
+
+<p>​    </p>
 
     </div>
 </article>
-
 
 
                 </div>
@@ -354,6 +295,12 @@
             
             <li class="list-group-item">
                 <span class="post-title">
+                    <a href="/2022/01/18/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%B8%A9%E7%9A%84%E5%9D%91/">博客搭建踩的坑</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
                     <a href="/2021/06/21/test/">test</a>
                 </span>
             </li>
@@ -404,6 +351,12 @@
                 </span>
             </li>
             
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2022/01/18/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%B8%A9%E7%9A%84%E5%9D%91/">博客搭建踩的坑</a>
+                </span>
+            </li>
+            
         </ul>
     </div>
 </aside>
@@ -415,17 +368,17 @@
 
                 
                 <li>
-                    <a href="/video/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                    <a href="/2022/01/18/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%B8%A9%E7%9A%84%E5%9D%91/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
                 </li>
                 
                 
                 <li>
-                    <a href="/video/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                    <a href="/2022/01/18/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%B8%A9%E7%9A%84%E5%9D%91/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
                 </li>
                 
                 
                 <li>
-                    <a href="/video/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                    <a href="/2022/01/18/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%B8%A9%E7%9A%84%E5%9D%91/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
                 </li>
                 
             </ul>
@@ -433,9 +386,9 @@
                 
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/web/" style="font-size: 10.757945330290267px;" class="tag-cloud-link">web</a>
+    <a href="/tags/web/" style="font-size: 19.879684981160796px;" class="tag-cloud-link">web</a>
     
-    <a href="/tags/%E6%82%A6%E8%AF%BB/" style="font-size: 19.44376447891527px;" class="tag-cloud-link">悦读</a>
+    <a href="/tags/%E6%82%A6%E8%AF%BB/" style="font-size: 10.801695891012994px;" class="tag-cloud-link">悦读</a>
     
 </div>
                 
