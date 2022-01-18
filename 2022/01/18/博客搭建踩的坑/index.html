@@ -219,142 +219,7 @@
         </center>
     </div>
     <div class="content-article">
-        <style type="text/css">
-blockquote {
-    margin: 0;
-    padding: 0;
-}
-body {
-    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
-    font-size: 13px;
-    line-height: 18px;
-    color: #737373;
-    background-color: white;
-    margin: 10px 13px 10px 13px;
-}
-table {
-    margin: 10px 0 15px 0;
-    border-collapse: collapse;
-}
-td,th { 
-    border: 1px solid #ddd;
-    padding: 3px 10px;
-}
-th {
-    padding: 5px 10px;  
-}
-a {
-    color: #0069d6;
-}
-a:hover {
-    color: #0050a3;
-    text-decoration: none;
-}
-a img {
-    border: none;
-}
-p {
-    margin-bottom: 15px;
-}
-h1 {
-    color: #404040;
-    margin-bottom: 18px;
-    font-size: 30px;
-}
-h2 {
-    font-size: 24px;
-}
-h3 {
-    font-size: 18px;
-}
-h4 {
-    font-size: 16px;
-}
-h5 {
-    font-size: 14px;
-}
-h6 {
-    color: #404040;
-    line-height: 36px;
-    font-size: 13px;
-}
-hr {
-    margin: 0 0 19px;
-    border: 0;
-    border-bottom: 1px solid #ccc;
-}
-blockquote {
-    padding: 13px 13px 21px 15px;
-    margin-bottom: 18px;
-    font-family:georgia,serif;
-    font-style: italic;
-}
-blockquote:before {
-    content:"\201C";
-    font-size:40px;
-    margin-left:-10px;
-    font-family:georgia,serif;
-    color:#eee;
-}
-blockquote p {
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 18px;
-    margin-bottom: 0;
-    font-style: italic;
-}
-code, pre {
-    font-family: Monaco, Andale Mono, Courier New, monospace;
-}
-code {
-    background-color: #fee9cc;
-    color: rgba(0, 0, 0, 0.75);
-    padding: 1px 3px;
-    font-size: 12px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-}
-pre {
-    display: block;
-    padding: 14px;
-    margin: 0 0 18px;
-    line-height: 16px;
-    font-size: 11px;
-    border: 1px solid #d9d9d9;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-}
-pre code {
-    background-color: #fff;
-    color:#737373;
-    font-size: 11px;
-    padding: 0;
-}
-sup {
-    font-size: 0.83em;
-    vertical-align: super;
-    line-height: 0;
-}{
--webkit-print-color-adjust: exact;
-}
-@media screen and (min-width: 914px) {
-body {
-    width: 854px;
-    margin:10px auto;
-}
-}
-@media print {
-body,code,pre code,h1,h2,h3,h4,h5,h6 {
-    color: black;
-}
-table, pre {
-    page-break-inside: avoid;
-}
-}
-</style>
-
-<h2 id="0-主题"><a href="#0-主题" class="headerlink" title="0.主题"></a>0.主题</h2><p>​    今天突发兴致再来搞搞静态博客，之前随便搞了个模板就传github了。那会跟着教程做，基本没有碰到什么问题。打开hexo的官网就看到了模仿忧郁的弟弟网站做的hexo主题移植，功能没有完全复原，但差的八九不离十，于是就打算搞这个主题，之后就踩了很多的坑。</p>
+        <h2 id="0-主题"><a href="#0-主题" class="headerlink" title="0.主题"></a>0.主题</h2><p>​    今天突发兴致再来搞搞静态博客，之前随便搞了个模板就传github了。那会跟着教程做，基本没有碰到什么问题。打开hexo的官网就看到了模仿忧郁的弟弟网站做的hexo主题移植，功能没有完全复原，但差的八九不离十，于是就打算搞这个主题，之后就踩了很多的坑。</p>
 <h2 id="1-Node版本"><a href="#1-Node版本" class="headerlink" title="1.Node版本"></a>1.Node版本</h2><p>​    之前在完成大课设的时候下载的node为比较新的16.x，当时就发现了一定的问题，即无法更新模块。在控制台中虽然显示下载，但在对应的node_modules中并没有相应的文件夹，这是通过安装其他模块时的报错发现的。比如tar的版本一直是2.2，使用<code>npm i</code>时就会提示（warn）版本过低。在使用<code>cnpm i</code>时却没有警告。</p>
 <p>​    在这次的配置过程中也遇到了这样的问题，但是有些模块版本需要更新，但是一直更新不了，这就导致一直报错。</p>
 <p>​    然后我发现了package.josn和package-lock.josn的区别，简单的说就是package-lock会将依赖的版本确定下来，这样就不会发生版本不对的问题。我一想是不是这个的问题，于是删除了package-lock进行了尝试，结果却是没什么用处。</p>
@@ -521,9 +386,9 @@ table, pre {
                 
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/web/" style="font-size: 12.396971009665283px;" class="tag-cloud-link">web</a>
+    <a href="/tags/web/" style="font-size: 8.08675712276851px;" class="tag-cloud-link">web</a>
     
-    <a href="/tags/%E6%82%A6%E8%AF%BB/" style="font-size: 18.215042533371655px;" class="tag-cloud-link">悦读</a>
+    <a href="/tags/%E6%82%A6%E8%AF%BB/" style="font-size: 10.448568658307778px;" class="tag-cloud-link">悦读</a>
     
 </div>
                 
