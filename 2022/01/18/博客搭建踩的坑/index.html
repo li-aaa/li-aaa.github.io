@@ -70,6 +70,25 @@
 </section>
     <!-- 欧尼酱功能, 谁用谁知道 -->
     
+    <div class="gal-menu gal-dropdown">
+    <div class="circle" id="gal">
+        <div class="ring">
+            <a href="https://li-aaa.github.io" class="menuItem" style="left: 50%; top: 15%;">首页</a>
+            
+            <a class="menuItem" style="left: 80.3109%; top: 32.5%;">下一页</a>
+            
+            <a href="/archives" class="menuItem" style="left: 80.3109%; top: 67.5%;">归档</a>
+            <a href="/about" class="menuItem" style="left: 50%; top: 85%;">关于</a>
+            <a href="/message" class="menuItem" style="left: 19.6891%; top: 67.5%;">留言板</a>
+
+            
+            <a class="menuItem" style="left: 19.6891%; top: 32.5%;">上一页</a>
+            
+        </div>
+        <audio id="audio" src="/imgs/oni.mp3"></audio>
+    </div>
+</div>
+    
     <header class="navbar navbar-inverse" id="gal-header">
     <div class="container">
         <div class="navbar-header">
@@ -155,6 +174,10 @@
                             <a href="/tags/%E6%82%A6%E8%AF%BB/">悦读</a>
                         </li>
                         
+                        <li>
+                            <a href="/tags/%E6%8A%80%E6%9C%AF/">技术</a>
+                        </li>
+                        
                         
                         
                     </ul>
@@ -196,6 +219,13 @@
         <div class="tag-article">
             
             <span class="label label-gal">
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/%E6%8A%80%E6%9C%AF/">技术</a>
+                
+            </span>
+            
+            <span class="label label-gal">
                 <i class="fa fa-calendar"></i> 2022-01-18
             </span>
             
@@ -214,19 +244,20 @@
             </p>
             <p>
                 
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/%E6%8A%80%E6%9C%AF/">技术</a>
+                
+                
                 
             </p>
         </center>
     </div>
     <div class="content-article">
         <h2 id="0-主题"><a href="#0-主题" class="headerlink" title="0.主题"></a>0.主题</h2><p>​    今天突发兴致再来搞搞静态博客，之前随便搞了个模板就传github了。那会跟着教程做，基本没有碰到什么问题。打开hexo的官网就看到了模仿忧郁的弟弟网站做的hexo主题移植，功能没有完全复原，但差的八九不离十，于是就打算搞这个主题，之后就踩了很多的坑。</p>
-<h2 id="1-Node版本"><a href="#1-Node版本" class="headerlink" title="1.Node版本"></a>1.Node版本</h2><p>​    之前在完成大课设的时候下载的node为比较新的16.x，当时就发现了一定的问题，即无法更新模块。在控制台中虽然显示下载，但在对应的node_modules中并没有相应的文件夹，这是通过安装其他模块时的报错发现的。比如tar的版本一直是2.2，使用<code>npm i</code>时就会提示（warn）版本过低。在使用<code>cnpm i</code>时却没有警告。</p>
-<p>​    在这次的配置过程中也遇到了这样的问题，但是有些模块版本需要更新，但是一直更新不了，这就导致一直报错。</p>
-<p>​    然后我发现了package.josn和package-lock.josn的区别，简单的说就是package-lock会将依赖的版本确定下来，这样就不会发生版本不对的问题。我一想是不是这个的问题，于是删除了package-lock进行了尝试，结果却是没什么用处。</p>
-<p>​    查遍网络，大多数的回答都是网络问题，通过使用国内的镜像解决。但我无论是开不开梯子，用npm还是cnpm都遇到了问题。</p>
-<p>​    之后我选择了更换Node版本，在下载了node14.x后，虽然问题还没有解决，但我惊喜的发现，模块可以更新了。在node_modules中出现了不同版本的同一模块。于是现在的问题就变成了版本适配问题。</p>
-<h2 id="2-node-sass版本"><a href="#2-node-sass版本" class="headerlink" title="2.node-sass版本"></a>2.node-sass版本</h2><p>​    <p>由于该项目需要使用hexo-renderer-sass，所以需要下载node-sass。但是遇到了版本不适配的问题，系统提示找不到对应版本的node-sass（win64+node14）。但在node-sass的网站中，我找到了版本对应的表格，我发现node-sass7.0.1是支持node14的，那么问题出在了哪。在后面的错误报告中我找到了一样东西uuid，这东西也报了错，在网上搜索后，在stackoverflow中找到了一条帖子说uuid在8以后的版本删除了一种表达方式，导致了和老版本无法兼容的问题。在我的尝试下，node14+uuid7.0.0+node-sass6.0.1+hexo-renderer-sass0.4.0成功跑通了。后面就是将博客发布到github上了。</p></p>
-<h2 id="3-python版本"><a href="#3-python版本" class="headerlink" title="3.python版本"></a>3.python版本</h2><p>​    <p>我在网上搜索中发现，该项目的某一模块需要使用python2.7。由于我本来就是python2.7，所以并未碰到有关问题，但还是记录一下。</p></p>
+<h2 id="1-Node版本"><a href="#1-Node版本" class="headerlink" title="1.Node版本"></a>1.Node版本</h2><p>​    之前在完成大课设的时候下载的node为比较新的16.x，当时就发现了一定的问题，即无法更新模块。在控制台中虽然显示下载，但在对应的node_modules中并没有相应的文件夹，这是通过安装其他模块时的报错发现的。比如tar的版本一直是2.2，使用<code>npm i</code>时就会提示（warn）版本过低。在使用<code>cnpm i</code>时却没有警告。<br>​    在这次的配置过程中也遇到了这样的问题，但是有些模块版本需要更新，但是一直更新不了，这就导致一直报错。<br>​    然后我发现了package.josn和package-lock.josn的区别，简单的说就是package-lock会将依赖的版本确定下来，这样就不会发生版本不对的问题。我一想是不是这个的问题，于是删除了package-lock进行了尝试，结果却是没什么用处。<br>​    查遍网络，大多数的回答都是网络问题，通过使用国内的镜像解决。但我无论是开不开梯子，用npm还是cnpm都遇到了问题。<br>​    之后我选择了更换Node版本，在下载了node14.x后，虽然问题还没有解决，但我惊喜的发现，模块可以更新了。在node_modules中出现了不同版本的同一模块。于是现在的问题就变成了版本适配问题。</p>
+<h2 id="2-node-sass版本"><a href="#2-node-sass版本" class="headerlink" title="2.node-sass版本"></a>2.node-sass版本</h2><p>​    由于该项目需要使用hexo-renderer-sass，所以需要下载node-sass。但是遇到了版本不适配的问题，系统提示找不到对应版本的node-sass（win64+node14）。但在node-sass的网站中，我找到了版本对应的表格，我发现node-sass7.0.1是支持node14的，那么问题出在了哪。在后面的错误报告中我找到了一样东西uuid，这东西也报了错，在网上搜索后，在stackoverflow中找到了一条帖子说uuid在8以后的版本删除了一种表达方式，导致了和老版本无法兼容的问题。在我的尝试下，node14+uuid7.0.0+node-sass6.0.1+hexo-renderer-sass0.4.0成功跑通了。后面就是将博客发布到github上了。</p>
+<h2 id="3-python版本"><a href="#3-python版本" class="headerlink" title="3.python版本"></a>3.python版本</h2><p>​    我在网上搜索中发现，该项目的某一模块需要使用python2.7。由于我本来就是python2.7，所以并未碰到有关问题，但还是记录一下。</p>
 <h2 id="4-贴一下package-json的源码"><a href="#4-贴一下package-json的源码" class="headerlink" title="4.贴一下package.json的源码"></a>4.贴一下package.json的源码</h2><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;hexo-site&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;version&quot;</span>: <span class="string">&quot;0.0.0&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;private&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;build&quot;</span>: <span class="string">&quot;hexo generate&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;clean&quot;</span>: <span class="string">&quot;hexo clean&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;deploy&quot;</span>: <span class="string">&quot;hexo deploy&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;server&quot;</span>: <span class="string">&quot;hexo server&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">&quot;hexo&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;version&quot;</span>: <span class="string">&quot;5.4.0&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">&quot;dependencies&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;hexo&quot;</span>: <span class="string">&quot;^5.0.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;hexo-deployer-git&quot;</span>: <span class="string">&quot;^3.0.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;hexo-generator-archive&quot;</span>: <span class="string">&quot;^1.0.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;hexo-generator-category&quot;</span>: <span class="string">&quot;^1.0.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;hexo-generator-index&quot;</span>: <span class="string">&quot;^2.0.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;hexo-generator-json-content&quot;</span>: <span class="string">&quot;^4.2.3&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;hexo-generator-tag&quot;</span>: <span class="string">&quot;^1.0.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;hexo-renderer-ejs&quot;</span>: <span class="string">&quot;^1.0.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;hexo-renderer-marked&quot;</span>: <span class="string">&quot;^4.0.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;hexo-renderer-sass&quot;</span>: <span class="string">&quot;^0.4.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;hexo-renderer-scss&quot;</span>: <span class="string">&quot;^1.2.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;hexo-renderer-stylus&quot;</span>: <span class="string">&quot;^2.0.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;hexo-server&quot;</span>: <span class="string">&quot;^2.0.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;hexo-theme-fluid&quot;</span>: <span class="string">&quot;^1.8.11&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;hexo-theme-landscape&quot;</span>: <span class="string">&quot;^0.0.3&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;node-sass&quot;</span>:<span class="string">&quot;6.0.1&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;uuid&quot;</span>: <span class="string">&quot;^7.0.0&quot;</span></span><br><span class="line">   </span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 
@@ -238,6 +269,15 @@
     </div>
 </article>
 
+
+<div id="comments-template"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script>
+	if(!window.commentConfig) {
+      window.commentConfig = {}
+      window.commentConfig.title = '博客搭建踩的坑'
+    }
+</script>
 
                 </div>
                 <aside class="col-md-4 gal-left" id="sidebar">
@@ -386,9 +426,11 @@
                 
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/web/" style="font-size: 16.677361422087564px;" class="tag-cloud-link">web</a>
+    <a href="/tags/web/" style="font-size: 13.45723763833849px;" class="tag-cloud-link">web</a>
     
-    <a href="/tags/%E6%82%A6%E8%AF%BB/" style="font-size: 16.786258224650354px;" class="tag-cloud-link">悦读</a>
+    <a href="/tags/%E6%82%A6%E8%AF%BB/" style="font-size: 17.46622284752267px;" class="tag-cloud-link">悦读</a>
+    
+    <a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 14.102301953631308px;" class="tag-cloud-link">技术</a>
     
 </div>
                 
@@ -499,6 +541,34 @@
 <script src="/js/blog.js"></script>
 
 
+
+<script src="/js/oni.js"></script>
+
+
+
+
+<script src="https://myau.moe/js/comment/gitment.browser.js"></script>
+<script>
+    if(window.commentConfig) {
+      window.commentConfig.id = 'Tue Jan 18 2022 19:58:49 GMT+0800'
+      window.commentConfig.owner = 'li-aaa'
+      window.commentConfig.repo = 'li-aaa.github.io'
+      window.commentConfig.client_id = '9072df57b90158db5f1b'
+      window.commentConfig.client_secret = 'acbcb693606643e87dd4272cc5c6dbe81f115784'
+      window.commentConfig.redirect_uri = ''
+    } else {
+      window.commentConfig = {
+      	id: 'Tue Jan 18 2022 19:58:49 GMT+0800',
+        owner: 'li-aaa',
+        repo: 'li-aaa.github.io',
+        client_id: '9072df57b90158db5f1b',
+        client_secret: 'acbcb693606643e87dd4272cc5c6dbe81f115784',
+        redirect_uri: ''
+      }
+    }
+</script>
+
+<script src="/js/comment/gitment.js"></script>
 
 
 </html>
